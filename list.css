@@ -1,0 +1,109 @@
+.list-heading{
+  margin: 0;
+  margin: 20px 5px;
+  color: rgb(174, 107, 236);
+  font-weight: 700;
+}
+
+#transactionTable{
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 100%;
+  font-size: 16px;
+  padding: 20px;
+  margin-top: 35px;
+  font-weight: 500;
+}
+
+thead{
+  background-color: #b8b8b8;
+  border-radius: 10px;
+}
+
+th, td{
+  padding: 12px;
+  text-align: center;
+  width: 100px;
+}
+
+th{
+  font-weight: bold;
+}
+
+td:nth-child(2){
+  white-space: normal;
+  word-break: break-word;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+td:nth-child(3){
+  text-transform: uppercase;
+}
+
+th:nth-child(3),
+td:nth-child(3){
+  text-align: center;
+}
+
+th:nth-child(2){
+  text-align: left;
+}
+
+td:nth-child(4),
+th:nth-child(4){
+  text-align: right;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd;
+  color: #5c5a5a;
+}
+
+.delete-btn{
+  display: none;
+  background-color: rgb(100, 100, 100);
+  border: none;
+  border-radius: 7px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover{
+  transform: scale(1.1);
+}
+
+.edit-btn{
+  display: none;
+  background-color: rgb(100, 100, 100);
+  border: none;
+  border-radius: 7px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.edit-btn:hover{
+  transform: scale(1.1);
+}
+
+tr:hover .edit-btn{
+  display: inline-block;
+}
+
+tr:hover .delete-btn{
+  display: inline-block;
+}
+
+.action-col,
+.action-header{
+  display: none;
+}
+
+table:hover .action-header{
+  display: table-cell;
+}
+
+tbody tr:hover .action-col{
+  display: table-cell;
+}

@@ -1,0 +1,49 @@
+.incomes{
+  color: green;
+}
+
+.expenses{
+  color: red;
+}
+
+body{
+  font-family: Roboto, Arial;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-bottom: 500px;
+}
+
+main{
+  background-color: #f5f7fa;
+  color: #1f2937;
+  accent-color: #10b981;
+  height: 100;
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  margin: 0px auto;
+  border-radius: 20px;
+}
+
+h1, h2{
+  font-size: 2em;
+  font-weight: 700;
+}
+
+input{
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+button{
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+select{
+  margin-bottom: 10px;
+  padding: 8px;
+}

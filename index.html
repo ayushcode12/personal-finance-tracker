@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.typekit.net/vju7byp.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="list.css">
+  <title>Personal-Finance-Tracker</title>
+</head>
+<body>
+  <main>
+    <div class="header">
+      <div class="title">
+        <h1>Expense Tracker</h1>
+      </div>
+      <div class="sub-title">
+        <h2>Your Balance <br><span id="balance">₹0.00</span></h2>
+      </div>
+      <div class="income-expense-grid">
+        <div id="income" class="income-style">
+          <p >Income <br> <span class="money-style" id="income-amount">₹0</span></p>
+        </div>
+        <div id="expense" class="expense-style">
+          <p>Expense <br> <span class="money-style" id="expense-amount">₹0</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div>
+        <h2 class="form-heading">Add Transaction</h2>
+      </div>
+
+      <form id="form" action="">
+
+        <p class="date-p">Date</p>
+        <input id="date" type="date">
+        
+        <p class="description-p">Description</p>
+        <input id="text" type="text" placeholder="Enter description">
+        
+        <p class="amount-p">Amount <span class="sign-info">(negative - expense, positive - income)</span> </p>
+        <input id="amount" type="number" placeholder="Enter amount">
+        
+        <select name="selected-category" id="category" class="category-style">
+          <option value="" disabled selected>Select Category</option>
+          <optgroup label="Income">
+            <option>Salary</option>
+            <option>Freelance</option>
+            <option>Investment</option>
+            <option>Bonus</option>
+            <option>Other Income</option>
+          </optgroup>
+          <optgroup label="Expenses">
+            <option>Food & Dining</option>
+            <option>Transportation</option>
+            <option>Shopping</option>
+            <option>Utilities & Bills</option>
+            <option>Health & Fitness</option>
+            <option>Entertainment</option>
+            <option>Education</option>
+            <option>Rent</option>
+            <option>Other Expenses</option>
+          </optgroup>
+        </select>
+        
+        <button id="submit" class="submit-style">Add Transaction</button>
+        
+        <button id="cancelBtn" style="display: none;" type="button">Cancel</button>
+      
+      </form>
+    </div>
+    
+    <div>
+      <div>
+        <h2 class="list-heading" >Transaction History</h2>
+      </div>
+
+      <div>
+        <select name="selected-category" id="filterCategory" class="category-style">
+          <option value="all">All Transactions</option>
+          <optgroup label="Income">
+            <option>Salary</option>
+            <option>Freelance</option>
+            <option>Investment</option>
+            <option>Bonus</option>
+            <option>Other Income</option>
+          </optgroup>
+          <optgroup label="Expenses">
+            <option>Food & Dining</option>
+            <option>Transportation</option>
+            <option>Shopping</option>
+            <option>Utilities & Bills</option>
+            <option>Health & Fitness</option>
+            <option>Entertainment</option>
+            <option>Education</option>
+            <option>Rent</option>
+            <option>Other Expenses</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="table-wrapper">
+        <table id="transactionTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Category</th>
+              <th>Amount</th>
+              <th class="action-header">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="list"></tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

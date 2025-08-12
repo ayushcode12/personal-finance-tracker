@@ -1,0 +1,78 @@
+.form-heading{
+  margin: 0;
+  margin-bottom: 20px;
+  color: rgb(32, 30, 30);
+  font-weight: 500;
+}
+
+#text, #amount, #date{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-left: 4px;
+  margin-right: 5px;
+  border-radius: 6px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 12px;
+  font-size: 14px;
+  border: 1px solid rgb(180, 180, 180);
+  transition: all 0.2s ease;
+}
+
+#text:hover, #amount:hover, #date:hover{
+  background-color: #f9fff9;
+  border-color: #4CAF50;
+}
+
+#text:focus, #amount:focus, #date:focus{
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+  background-color: #ffffff;
+}
+
+input::placeholder{
+  color: rgb(116, 116, 116);
+}
+
+.description-p, .amount-p, .date-p{
+  font-weight: 700;
+}
+
+.sign-info{
+  font-size: 14px;
+  font-weight: 550;
+}
+
+.submit-style{
+  background-color: rgb(174, 107, 236);
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 7px;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.submit-style:hover{
+  transform: scale(1.05);
+}
+
+.category-style{
+  background-color: rgb(221, 221, 221);
+  border-radius: 5px;
+  border: 2px solid gray;
+  padding: 7px;
+  margin: 5px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.15s ease;
+}
+
+.category-style:hover{
+  border-color: #4CAF50;
+  background-color: #f9fff9;
+  transform: scale(1.03);
+}
