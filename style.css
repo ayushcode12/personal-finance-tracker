@@ -13,7 +13,7 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding-bottom: 500px;
+  padding-bottom: 300px;
 }
 
 main{
@@ -22,7 +22,7 @@ main{
   accent-color: #10b981;
   height: 100;
   width: 100%;
-  max-width: 700px;
+  max-width: 900px;
   padding: 20px;
   margin: 0px auto;
   border-radius: 20px;

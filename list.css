@@ -107,3 +107,8 @@ table:hover .action-header{
 tbody tr:hover .action-col{
   display: table-cell;
 }
+
+.table-wrapper{
+  overflow-x: auto;
+  width: 100%;
+}
