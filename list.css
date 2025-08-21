@@ -57,11 +57,11 @@ th:nth-child(4){
   text-align: right;
 }
 
-#transactionTable th:nth-child(1) { width: 15%; } /* Date */
-#transactionTable th:nth-child(2) { width: 30%; } /* Description */
+#transactionTable th:nth-child(1) { width: 20%; } /* Date */
+#transactionTable th:nth-child(2) { width: 35%; } /* Description */
 #transactionTable th:nth-child(3) { width: 20%; } /* Category */
-#transactionTable th:nth-child(4) { width: 20%; } /* Amount */
-#transactionTable th:nth-child(5) { width: 15%; } /* Actions */
+#transactionTable th:nth-child(4) { width: 25%; } /* Amount */
+#transactionTable th:nth-child(5) { width: 25%; } /* Actions */
 
 
 tbody tr {
