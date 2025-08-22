@@ -4,6 +4,7 @@ const amountInput = document.getElementById('amount');
 const categorySelected = document.getElementById('category');
 const cancelButton = document.getElementById('cancelBtn');
 const dateInput = document.getElementById('date');
+let myChart;
 
 dateInput.value = new Date().toISOString().split('T')[0];
 
@@ -11,8 +12,9 @@ cancelButton.addEventListener('click', handleCancelEdit)
 
 let transactionList = JSON.parse(localStorage.getItem("transactions")) || [];
 
-updateTotal();
 renderList(transactionList);
+renderChart();
+updateTotal();
 
 form.addEventListener('submit', function(event){
   event.preventDefault();
@@ -48,6 +50,7 @@ form.addEventListener('submit', function(event){
   localStorage.setItem("transactions", JSON.stringify(transactionList));
   editId = "";
   renderList(transactionList);
+  renderChart();
   updateTotal();
 
   textInput.value = "";
@@ -104,13 +107,14 @@ function deleteListItem(event){
 
     localStorage.setItem("transactions", JSON.stringify(transactionList))
 
-    renderList(transactionList)
-    alert("Deletd Successfully!")
+    renderList(transactionList);
+    alert("Deleted Successfully!");
+    renderChart();
+    updateTotal();
   }
   else{
     alert("Cancelled")
   }
-  updateTotal();
 }
 
 function renderList(transactionArray){
@@ -211,4 +215,50 @@ function handleCancelEdit(){
   textInput.focus();
   renderList(transactionList); 
 
+}
+
+function prepareCategoryTotals(){
+  let categoryTotals = {};
+
+  transactionList.forEach((list) => {
+    if(list.amount < 0){
+      if(!categoryTotals[list.category]){
+        categoryTotals[list.category] = 0
+      }
+      categoryTotals[list.category] += Math.abs(list.amount);
+    }
+  });
+
+  return categoryTotals;
+}
+
+function renderChart() {
+  const totals = prepareCategoryTotals();
+  const ctx = document.getElementById('transactionChart').getContext('2d');
+
+  if(myChart){
+    myChart.destroy();
+  }
+
+  myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: Object.keys(totals),
+      datasets: [{
+        label: 'Expenses',
+        data: Object.values(totals),
+        backgroundColor: [
+          '#FF6384',
+          '#36A2EB',
+          '#FFCE56',
+          '#4BC0C0',
+          '#9966FF',
+          '#FF9F40',
+          '#8BC34A',
+          '#E91E63',
+          '#00BCD4'
+        ]
+      }]
+    }
+  });
 }

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="header.css">
   <link rel="stylesheet" href="form.css">
   <link rel="stylesheet" href="list.css">
+  <link rel="stylesheet" href="chart.css">
   <title>Personal-Finance-Tracker</title>
 </head>
 <body>
@@ -118,8 +119,17 @@
         </table>
       </div>
     </div>
+
+    <div class="chart-container">
+      <h2 class="chart-heading">Expenses by Category</h2>
+      <canvas id="transactionChart" width="400" height="200">
+      </canvas>
+    </div>
+
   </main>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js" defer></script>
+
 </body>
 </html>

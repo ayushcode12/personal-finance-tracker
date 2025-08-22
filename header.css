@@ -38,7 +38,7 @@
   flex: 0 0 100%;
   grid-template-columns: 1fr 1fr;
   place-items: center;
-  gap: 50px; 
+  gap: 40px; 
   margin-top: 50px;
   margin-bottom: 40px;
 }

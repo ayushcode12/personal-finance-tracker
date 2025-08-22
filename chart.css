@@ -1,0 +1,16 @@
+.chart-container{
+  width: 100%;              
+  max-width: 900px;       
+  margin: auto;             
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+.chart-heading{
+  margin-top: 30px;
+  margin-left: 5px;
+  color: rgb(174, 107, 236);;
+}
