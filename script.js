@@ -265,7 +265,6 @@ function renderChart() {
       scales: {
         x: {
           ticks: {
-            
             maxRotation: 0,
             minRotation: 0
           }
