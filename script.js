@@ -259,6 +259,18 @@ function renderChart() {
           '#00BCD4'
         ]
       }]
+    },
+    options: {
+      responsive: true,
+      scales: {
+        x: {
+          ticks: {
+            autoSkip: false,
+            maxRotation: 0,
+            minRotation: 0
+          }
+        }
+      }
     }
   });
 }
