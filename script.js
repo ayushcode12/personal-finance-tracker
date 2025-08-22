@@ -248,27 +248,17 @@ function renderChart() {
         label: 'Expenses',
         data: Object.values(totals),
         backgroundColor: [
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56',
-          '#4BC0C0',
-          '#9966FF',
-          '#FF9F40',
-          '#8BC34A',
-          '#E91E63',
-          '#00BCD4'
+          '#FF6384', '#36A2EB', '#FFCE56',
+          '#4BC0C0', '#9966FF', '#FF9F40',
+          '#8BC34A', '#E91E63', '#00BCD4'
         ]
       }]
     },
     options: {
       responsive: true,
-      scales: {
-        x: {
-          ticks: {
-            maxRotation: 0,
-            minRotation: 0
-          }
-        }
+      indexAxis: 'y',
+      plugins: {
+        legend: { display: false }
       }
     }
   });
